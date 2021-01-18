@@ -108,5 +108,17 @@ The following comments apply to the above methods:
 * `bounds.eq` will return `-1` if no element matching `y` is found.
 * `bounds.eq` will return the first found item with the given index.  It can be a little faster than the other methods if you just want to find some random match and do not care where it is.
 
+Finally, if function constructors are not permissible, you may require the desired variant directly, either by requiring the specific function via
+
+```js
+var geBounds = require('binary-search-bounds/ge');
+```
+
+or by requiring the `no-codegen` variant of the module (which is slightly larger since all functions are exported directly):
+
+```
+var bounds = require('binary-search-bounds/no-codegen');
+```
+
 ## Credits
 (c) 2013-2015 Mikola Lysenko. MIT License
